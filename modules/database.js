@@ -1,17 +1,14 @@
 var mongoose = require('mongoose');
 
-var servidor = 'localhost:27017';
-var db = 'hedelcode';
-
 class Database{
     constructor(){
-        //Promesas
-        mongoose.connect(`mongodb://${servidor}/${db}`)
-        .then(()=>{
-            console.log('Se conecto a mongo');
-        }).catch((error)=>{
-            console.log(error);
-        });
+        this.conectar();
+    }
+
+    conectar(){
+        mongoose.connect(`mongodb+srv://henrygironnavas:BFkUoGkzJQEyUl04@hedelproject.vglvpw8.mongodb.net/hedelcode?retryWrites=true&w=majority`)
+        .then(result=>console.log('se conecto a mongodb'))
+        .catch(error=>console.log(error));
     }
 }
 

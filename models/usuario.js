@@ -1,15 +1,15 @@
 var mongoose = require('mongoose');
+
 var esquema = new mongoose.Schema(
     {
         nombre: String,
         correo: String,
-        alias: String,
         contrasena: String,
+        idDirectorio: mongoose.SchemaTypes.Mixed,
+        archivosCompartidos: [],
         descripcion: String,
-        imagen: String,
-        inicio: mongoose.SchemaTypes.mixed,
-        plan: String,
-        proyectos: Array
+        imagenes: [],
+        plan: Number
     }
 );
 
