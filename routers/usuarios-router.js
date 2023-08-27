@@ -9,7 +9,7 @@ router.post('/', function (req, res) {
             nombre: req.body.nombre,
             correo: req.body.correo,
             contrasena: req.body.contrasena,
-            idDirectorio: "",
+            idDirectorio: req.body.idDirectorio,
             archivosCompartidos: [],
             descripcion: req.body.descripcion,
             imagenes: [],
